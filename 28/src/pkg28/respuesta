@@ -1,0 +1,68 @@
+
+Sobre la clase "SalaCine"
+
+¿Qué propiedades tiene un objeto SalaCine?
+
+ Aforo (cantidad total de butacas)
+ Ocupadas (butacas ya ocupadas)
+ Película (nombre de la película que se está proyectando)
+ Entrada (precio de la entrada)
+
+¿Qué valores tiene por defecto un objeto SalaCine al crearse?
+
+ Aforo: 100
+ Ocupadas: 0
+ Película: una cadena vacía ""
+ Entrada: 5.0
+
+¿Qué métodos puedo usar para cambiar las propiedades? (set)
+
+    setAforo(int) -> cambia el aforo total
+    setOcupadas(int) -> cambia el número de butacas ocupadas
+    setLibres(int) -> ajusta las ocupadas en base a las libres
+    setPelicula(String) -> pone el título de la película
+    setEntrada(double) -> cambia el precio de la entrada
+
+¿Qué métodos puedo usar para pedir información? (get)
+
+    getAforo() -> devuelve el aforo
+    getOcupadas() -> devuelve cuántas butacas están ocupadas
+    getLibres() -> devuelve cuántas butacas están libres
+    getPorcentaje() -> devuelve el porcentaje de ocupación
+    getIngresos() -> devuelve los ingresos generados
+    getPelicula()-> dice qué película se está proyectando
+    getEntrada() -> devuelve el precio de la entrada
+
+¿Qué métodos sirven para dar órdenes?
+
+vaciar() -> pone en cero las ocupadas y borra la película
+entraUno() -> suma una persona más en las ocupadas
+
+
+
+Sobre la clase "Rectangulo"
+
+¿Cómo declaro y creo un objeto llamado "suelo"?
+Rectangulo suelo = new Rectangulo();
+
+
+¿Qué métodos usaría para cambiar la base y la altura?
+ setBase(double)
+ setAltura(double)
+
+¿Cómo asigno una base de 30 y una altura de 50?
+suelo.setBase(30);
+suelo.setAltura(50);
+
+
+¿Qué métodos get serían útiles?
+getBase()
+getAltura()
+getArea() = base \* altura
+getPerimetro() = 2 \* (base + altura)
+
+¿Cómo obtengo el área y el perímetro del rectángulo?
+double area = suelo.getArea();
+double peri = suelo.getPerimetro();
+
+
