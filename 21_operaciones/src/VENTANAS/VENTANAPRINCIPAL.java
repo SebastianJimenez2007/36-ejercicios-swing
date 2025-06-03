@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package VENTANAS;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 /**
@@ -13,6 +14,9 @@ public class VENTANAPRINCIPAL extends javax.swing.JFrame {
     JLabel etiNum1;
     JLabel etiNum2;
     JTextField txtNum1;
+    JTextField txtNum2;
+    JButton btnSumar;
+    JButton btnRestar;
     
     /**
      * Creates new form VENTANAPRINCIPAL
@@ -31,6 +35,33 @@ public class VENTANAPRINCIPAL extends javax.swing.JFrame {
         etiNum1.setText("Numero 1:");
         etiNum1.setBounds(10,10,100,20);
         this.getContentPane().add(etiNum1);
+        
+        etiNum2 = new JLabel();
+        etiNum2.setText("Numero 2:");
+        etiNum2.setBounds(10,60,100,20);
+        this.getContentPane().add(etiNum2);
+        
+        txtNum1 = new JTextField();
+        txtNum1.setText("Numero 1:");
+        txtNum1.setBounds(110,10,100,20);
+        this.getContentPane().add(txtNum1);
+        
+        txtNum2 = new JTextField();
+        txtNum2.setText("Numero 2:");
+        txtNum2.setBounds(110,60,100,20);
+        this.getContentPane().add(txtNum2);
+        
+        btnSumar = new JButton();
+        btnSumar.setText("Sumar");
+        btnSumar.setBounds(110,120,100,20);
+        this.getContentPane().add(btnSumar);
+        
+        btnRestar = new JButton();
+        btnRestar.setText("Sumar");
+        btnRestar.setBounds(150,120,100,20);
+        this.getContentPane().add(btnRestar);
+        
+        
         
     }
     /**
