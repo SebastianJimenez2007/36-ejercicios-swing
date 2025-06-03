@@ -1,0 +1,55 @@
+
+1. ¿Cuál es el nombre de la clase de los botones normales que se usan en las ventanas?
+La clase es `javax.swing.JButton`.
+
+2. ¿Cómo declararía un botón llamado btnAceptar, y otro llamado btnCancelar?
+
+JButton btnAceptar;
+JButton btnCancelar;
+
+
+3. ¿Cómo construiría dichos botones?
+
+btnAceptar = new JButton("Aceptar");
+btnCancelar = new JButton("Cancelar");
+
+También se pueden construir sin texto y luego asignarlo:
+
+btnAceptar = new JButton();
+btnAceptar.setText("Aceptar");
+
+
+4. Indique algunos métodos para cambiar propiedades de dichos botones (métodos set):
+
+ setText(String texto) – cambia el texto del botón.
+ setEnabled(boolean estado) – habilita o deshabilita el botón.
+ setVisible(boolean visible) – muestra u oculta el botón.
+ setBounds(int x, int y, int ancho, int alto) – cambia la posición y tamaño del botón.
+ setBackground(Color c) – cambia el color de fondo del botón.
+ setForeground(Color c) – cambia el color del texto del botón.
+ setFont(Font f) – cambia la fuente del texto.
+ setToolTipText(String texto) – muestra un mensaje de ayuda al pasar el cursor.
+
+5. Indique algunos métodos para pedirle información a dichos botones (métodos get):
+
+ getText() – devuelve el texto actual del botón.
+ isEnabled() – indica si el botón está habilitado.
+ isVisible() – indica si el botón es visible.
+ getBackground() – devuelve el color de fondo del botón.
+ getForeground() – devuelve el color del texto del botón.
+getBounds()` – devuelve el rectángulo que representa su posición y tamaño.
+
+6. Indique algún método para dar órdenes a dichos botones (algún método que no sea ni set ni get):
+
+doClick() – simula que el botón fue presionado por el usuario.
+addActionListener(ActionListener al) – asigna una acción que se ejecuta cuando el botón es presionado.
+
+Ejemplo:
+
+
+btnAceptar.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Botón Aceptar presionado");
+    }
+});
+
