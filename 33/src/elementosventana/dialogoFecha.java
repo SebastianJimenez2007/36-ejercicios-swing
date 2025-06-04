@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package PaquetePrincipal;
+package elementosventana;
 
 /**
  *
@@ -13,56 +13,60 @@ public class dialogoFecha extends javax.swing.JDialog {
     int Mes;
     int Anio;
     int BotonPulsado;
+
     /**
      * Creates new form dialogoFecha
      */
     public dialogoFecha(java.awt.Frame parent, boolean modal) {
+        
         super(parent, modal);
         initComponents();
     }
-    
-    public String getFecha(){
+
+    public String getFecha() {
+        String cadena;
+        cadena = Dia + "/" + Mes + "/" + Anio;
+        return cadena;
+    }
+
+    public String getFechaComplete() {
         String cadena;
         
-        cadena = Dia +"/"+Mes +"/"+Anio;
+        cadena = Dia + " de ";
+        if (Mes == 1) {
+            cadena = cadena + "Enero";
+        } else if (Mes == 2) {
+            cadena = cadena + "Febrero";
+        } else if (Mes == 3) {
+            cadena = cadena + "Marzo";
+        } else if (Mes == 4) {
+            cadena = cadena + "Abril";
+        } else if (Mes == 5) {
+            cadena = cadena + "Mayo";
+        } else if (Mes == 6) {
+            cadena = cadena + "Junio";
+        } else if (Mes == 7) {
+            cadena = cadena + "Julio";
+        } else if (Mes == 8) {
+            cadena = cadena + "Agosto";
+        } else if (Mes == 9) {
+            cadena = cadena + "Septiembre";
+        } else if (Mes == 10) {
+            cadena = cadena + "Octubre";
+        } else if (Mes == 11) {
+            cadena = cadena + "Noviembre";
+        } else if (Mes == 12) {
+            cadena = cadena + "Diciembre";
+        }
+
+        cadena = cadena + " de " + Anio;
         return cadena;
         
     }
     
-    public String getFechaCompleta() { 
-        String cadena; 
-        cadena = Dia + " de "; 
-        if (Mes==1) {
-        cadena = cadena + "Enero"; 
-        } else if (Mes==2) { 
-        cadena = cadena + "Febrero"; 
-        } else if (Mes==3) { 
-        cadena = cadena + "Marzo"; 
-        } else if (Mes==4) { 
-        cadena = cadena + "Abril"; 
-        } else if (Mes==5) { 
-        cadena = cadena + "Mayo"; 
-        } else if (Mes==6) { 
-        cadena = cadena + "Junio"; 
-        } else if (Mes==7) { 
-        cadena = cadena + "Julio"; 
-        } else if (Mes==8) { 
-        cadena = cadena + "Agosto"; 
-        } else if (Mes==9) { 
-        cadena = cadena + "Septiembre"; 
-        } else if (Mes==10) { 
-        cadena = cadena + "Octubre"; 
-        } else if (Mes==11) { 
-        cadena = cadena + "Noviembre"; 
-        } else if (Mes==12) { 
-        cadena = cadena + "Diciembre"; 
-        } 
-        cadena = cadena + "de "+Anio; 
-        return cadena;
-}
-    
     public int getBotonPulsado(){
         return BotonPulsado;
+        
     }
 
     /**
@@ -74,16 +78,31 @@ public class dialogoFecha extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAceptar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         txtDia = new javax.swing.JTextField();
         txtMes = new javax.swing.JTextField();
         txtAnio = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnAceptar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 86, -1));
+        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 99, -1));
+
+        txtAnio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAnioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 93, -1));
+
+        jLabel1.setText("/");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
+
+        jLabel2.setText("/");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
 
         btnAceptar.setText("Aceptar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -100,31 +119,25 @@ public class dialogoFecha extends javax.swing.JDialog {
             }
         });
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, -1));
-        getContentPane().add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, -1));
-        getContentPane().add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 100, -1));
-        getContentPane().add(txtAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 90, -1));
-
-        jLabel1.setText("/");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 20, -1));
-
-        jLabel2.setText("/");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 15, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
         // TODO add your handling code here:
-        BotonPulsado = 1;
+    }//GEN-LAST:event_txtAnioActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+    BotonPulsado = 1;
         this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        // TODO add your handling code here:
+
         Dia = Integer.parseInt(txtDia.getText());
         Mes = Integer.parseInt(txtMes.getText());
         Anio = Integer.parseInt(txtAnio.getText());
-        
+
         BotonPulsado = 0;
         this.dispose();
         
@@ -155,6 +168,7 @@ public class dialogoFecha extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(dialogoFecha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
